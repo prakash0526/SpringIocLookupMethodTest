@@ -25,7 +25,6 @@ public class LookupMethodController {
     public List<String> getDateAndTime() throws InterruptedException {
         String response1 = lookupService.getDetails();
         Thread.sleep(3000);
-        System.out.println("Hello......");
         String response2 = lookupService.getDetails();
         return Arrays.asList(response1, response2);
     }
