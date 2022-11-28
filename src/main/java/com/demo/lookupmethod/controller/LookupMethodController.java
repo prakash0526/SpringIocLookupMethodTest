@@ -23,9 +23,11 @@ public class LookupMethodController {
      */
     @GetMapping("/details")
     public List<String> getDateAndTime() throws InterruptedException {
+    	
         String response1 = lookupService.getDetails();
         Thread.sleep(3000);
         String response2 = lookupService.getDetails();
+        
         return Arrays.asList(response1, response2);
     }
 
